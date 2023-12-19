@@ -1,14 +1,6 @@
 installCRDs: true
 validatingWebhookConfigurationNamespaceSelector:
   matchExpressions:
-    - key: cert-manager.io/disable-validation
-      operator: NotIn
-      values:
-        - 'true'
-    - key: name
-      operator: NotIn
-      values:
-        - test-cert-manager-02
     - key: control-plane
       operator: NotIn
       values:
