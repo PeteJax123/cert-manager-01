@@ -1,4 +1,8 @@
 installCRDs: true
+# values.yaml
+validatingWebhookConfigurationAnnotations:
+  cert-manager.io/inject-ca-from-secret: test-cert-manager/cert-manager-01-webhook-ca
+
 validatingWebhookConfigurationNamespaceSelector:
   matchExpressions:
     - key: cert-manager.io/disable-validation
@@ -13,4 +17,5 @@ validatingWebhookConfigurationNamespaceSelector:
       operator: NotIn
       values:
         - aks
+
 
